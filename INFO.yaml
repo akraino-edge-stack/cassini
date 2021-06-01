@@ -1,0 +1,39 @@
+---
+project: 'cassini'
+project_creation_date: '2021-06-1'
+project_category: ''
+lifecycle_state: 'Incubation'
+project_lead: &akraino_cassini_ptl
+    name: 'Sushant kumar'
+    email: 'sushant@coredge.io'
+    id: 'sushlfi'
+    company: 'Coredge'
+    timezone: 'Unknown/Unknown'
+primary_contact: *akraino_cassini_ptl
+issue_tracking:
+    type: 'jira'
+    url: 'https://jira.akraino.org/projects/'
+    key: 'CAS'
+mailing_list:
+    type: 'groups.io'
+    url: 'technical-discuss@lists.akraino.org'
+    tag: '[]'
+realtime_discussion:
+    type: 'irc'
+    server: 'freenode.net'
+    channel: '#akraino'
+meetings:
+    - type: 'gotomeeting+irc'
+      agenda: 'https://wiki.akraino.org/display/'
+      url: ''
+      server: 'freenode.net'
+      channel: '#akraino'
+      repeats: ''
+      time: ''
+repositories:
+    - cassini
+committers:
+    - <<: *akraino_cassini_ptl
+tsc:
+    # yamllint disable rule:line-length
+    approval: 'https://wiki.akraino.org/display/AK/TSC+2021-05-20+%28Thursday%29+7+am+Pacific'
