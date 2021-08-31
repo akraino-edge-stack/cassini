@@ -1,0 +1,36 @@
+# This crate should NOT be upstreamed to crates.io; it is only intended for
+# PARSEC testing purposes (both locally and on CI)
+[package]
+name = "e2e_tests"
+version = "0.1.0"
+authors = ["Parsec Project Contributors"]
+description = "End to end testing framework for PARSEC"
+license = "Apache-2.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+serde = { version = "1.0.123", features = ["derive"] }
+parsec-client = { git = "https://github.com/parallaxsecond/parsec-client-rust.git", rev = "e7c8989aed83343d2d86896f811fbe49f7d0edfc", features = ["testing", "spiffe-auth"] }
+log = "0.4.14"
+# Compatible version with crate rsa
+rand = "0.7.3"
+env_logger = "0.8.3"
+
+[dev-dependencies]
+ring = "0.16.20"
+rsa = "0.3.0"
+picky-asn1-x509 = "0.6.0"
+base64 = "0.13.0"
+num_cpus = "1.13.0"
+picky-asn1-der = "0.2.4"
+picky-asn1 = "0.3.1"
+sha2 = "0.9.3"
+
+[features]
+mbed-crypto-provider = []
+tpm-provider = []
+pkcs11-provider = []
+cryptoauthlib-provider = []
+trusted-service-provider = []
+all-providers = ["pkcs11-provider","tpm-provider","mbed-crypto-provider","cryptoauthlib-provider","trusted-service-provider"]
