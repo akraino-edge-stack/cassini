@@ -1,0 +1,9 @@
+[app]
+port = 8300
+
+[log]
+level = "debug" # debug info warn error dpanic panic fatal
+filename = "ParsecClient.log"
+maxSize = 200 # MB
+maxAge = 30 # day
+maxBackups = 5 # pics
